@@ -1,15 +1,20 @@
-# Act with Prudence
+<div dir="rtl">
 
-> *"Whatever you undertake, act with prudence and consider the consequences" Anon*
+# با احتیاط عمل کنید
 
-No matter how comfortable a schedule looks at the beginning of an iteration, you can't avoid being under pressure some of the time. If you find yourself having to choose between "doing it right" and "doing it quick" it is often appealing to "do it quick" on the understanding that you'll come back and fix it later. When you make this promise to yourself, your team, and your customer, you mean it. But all too often the next iteration brings new problems and you become focused on them. This sort of deferred work is known as technical debt and it is not your friend. Specifically, Martin Fowler calls this deliberate technical debt in his [taxonomy of technical debt](http://martinfowler.com/bliki/TechnicalDebtQuadrant.html), which should not be confused with inadvertent technical debt.
+> *""هر کاری که انجام می دهید، با احتیاط عمل کنید و عواقب آن را در نظر بگیرید."*
 
-Technical debt is like a loan: You benefit from it in the short-term, but you have to pay interest on it until it is fully paid off. Shortcuts in the code make it harder to add features or refactor your code. They are breeding grounds for defects and brittle test cases. The longer you leave it, the worse it gets. By the time you get around to undertaking the original fix there may be a whole stack of not-quite-right design choices layered on top of the original problem making the code much harder to refactor and correct. In fact, it is often only when things have got so bad that you must fix it, that you actually do go back to fix it. And by then it is often so hard to fix that you really can't afford the time or the risk.
+مهم نیست که یک برنامه در ابتدای یک تکرار چقدر راحت به نظر می رسد، نمی توانید از تحت فشار بودن برخی مواقع اجتناب کنید. اگر متوجه شدید که مجبور هستید بین «انجام درست کار» و «انجام سریع آن» یکی را انتخاب کنید، اغلب جذاب است که «آن را سریع انجام دهید» با این درک که بعداً برمی‌گردید و آن را درست می‌کنید. وقتی این قول را به خود، تیم و مشتری خود می دهید، منظورتان این است. اما اغلب تکرار بعدی مشکلات جدیدی را به همراه دارد و شما روی آنها متمرکز می شوید. این نوع کار معوق به عنوان بدهی فنی شناخته می شود و دوست شما نیست. به طور خاص، مارتین فاولر این بدهی فنی عمدی را در طبقه بندی بدهی فنی خود می نامد ، که نباید با بدهی فنی سهوی اشتباه گرفته شود.
 
-There are times when you must incur technical debt to meet a deadline or implement a thin slice of a feature. Try not to be in this position, but if the situation absolutely demands it, then go ahead. But (and this is a big BUT) you must track technical debt and pay it back quickly or things go rapidly downhill. As soon as you make the decision to compromise, write a task card or log it in your issue tracking system to ensure that it does not get forgotten.
+بدهی فنی مانند یک وام است: شما در کوتاه مدت از آن سود می برید، اما باید بهره آن را پرداخت کنید تا زمانی که به طور کامل پرداخت شود. میانبرهای موجود در کد، افزودن ویژگی ها یا اصلاح مجدد کد را دشوارتر می کند. آنها محل پرورش عیوب و موارد آزمایش شکننده هستند. هر چه بیشتر آن را ترک کنید، بدتر می شود. زمانی که به انجام تعمیر اصلی می رسید، ممکن است مجموعه ای کامل از انتخاب های طراحی نه چندان درست در بالای مشکل اصلی وجود داشته باشد که اصلاح و تصحیح کد را بسیار سخت تر می کند. در واقع، اغلب تنها زمانی که اوضاع آنقدر بد شده است که باید آن را اصلاح کنید، واقعاً برای رفع آن به عقب برمی‌گردید. و در آن زمان رفع آن به قدری سخت است که واقعاً نمی توانید زمان یا ریسک آن را متحمل شوید.
 
-If you schedule repayment of the debt in the next iteration, the cost will be minimal. Leaving the debt unpaid will accrue interest and that interest should be tracked to make the cost visible. This will emphasize the effect on business value of the project's technical debt and enables appropriate prioritization of the repayment. The choice of how to calculate and track the interest will depend on the particular project, but track it you must.
+مواقعی وجود دارد که باید برای رسیدن به یک مهلت یا اجرای بخش نازکی از یک ویژگی، بدهی فنی داشته باشید. سعی کنید در این موقعیت قرار نگیرید، اما اگر شرایط کاملاً ایجاب می کند، پس ادامه دهید. اما (و این یک اما بزرگ است) شما باید بدهی فنی را ردیابی کنید و آن را به سرعت بازپرداخت کنید، در غیر این صورت اوضاع به سرعت در حال سقوط است. به محض اینکه تصمیم به مصالحه گرفتید، یک کارت وظیفه بنویسید یا آن را در سیستم ردیابی مشکل خود وارد کنید تا مطمئن شوید که فراموش نمی شود.
 
-Pay off technical debt as soon as possible. It would be imprudent to do otherwise.
+اگر بازپرداخت بدهی را در تکرار بعدی برنامه ریزی کنید، هزینه حداقل خواهد بود. پرداخت نشدن بدهی باعث تعلق سود خواهد شد و این سود باید برای قابل مشاهده بودن هزینه پیگیری شود. این امر بر تأثیر ارزش تجاری بدهی فنی پروژه تأکید می کند و امکان اولویت بندی مناسب بازپرداخت را فراهم می کند. انتخاب نحوه محاسبه و پیگیری سود به پروژه خاص بستگی دارد، اما باید آن را پیگیری کنید.
 
-By [Seb Rose](http://programmer.97things.oreilly.com/wiki/index.php/Seb_Rose)
+بدهی فنی را در اسرع وقت پرداخت کنید. در غیر این صورت بی احتیاطی خواهد بود.
+
+
+ [Seb Rose](http://programmer.97things.oreilly.com/wiki/index.php/Seb_Rose) معلومات کتاب
+
+</div>
