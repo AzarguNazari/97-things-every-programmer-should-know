@@ -1,19 +1,23 @@
-# Apply Functional Programming Principles
+<div dir="rtl">
 
-Functional programming has recently enjoyed renewed interest from the mainstream programming community. Part of the reason is because *emergent properties* of the functional paradigm are well positioned to address the challenges posed by our industry's shift toward multi-core. However, while that is certainly an important application, it is not the reason this piece admonishes you to *know thy functional programming*.
+#  از اصول برنامه نویسی تابعی استفاده کنید
 
-Mastery of the functional programming paradigm can greatly improve the quality of the code you write in other contexts. If you deeply understand and apply the functional paradigm, your designs will exhibit a much higher degree of *referential transparency*.
+برنامه نویسی کاربردی اخیراً مورد توجه جامعه برنامه نویسی اصلی قرار گرفته است. بخشی از دلیل آن این است که ویژگی‌های نوظهور پارادایم عملکردی به خوبی برای رسیدگی به چالش‌های ناشی از تغییر صنعت ما به سمت چند هسته‌ای قرار دارند. با این حال، در حالی که مطمئناً یک برنامه مهم است، به این دلیل نیست که این قطعه شما را به دانستن برنامه‌نویسی عملکردی خود توصیه می‌کند .
 
-Referential transparency is a very desirable property: It implies that functions consistently yield the same results given the same input, irrespective of where and when they are invoked. That is, function evaluation depends less — ideally, not at all — on the side effects of mutable state.
+تسلط بر پارادایم برنامه نویسی کاربردی می تواند کیفیت کدهایی را که در زمینه های دیگر می نویسید تا حد زیادی بهبود بخشد. اگر پارادایم عملکردی را عمیقاً درک کرده و به کار ببرید، طرح های شما درجه بسیار بالاتری از شفافیت ارجاعی را نشان خواهند داد.
 
-A leading cause of defects in imperative code is attributable to mutable variables. Everyone reading this will have investigated why some value is not as expected in a particular situation. Visibility semantics can help to mitigate these insidious defects, or at least to drastically narrow down their location, but their true culprit may in fact be the providence of designs that employ inordinate mutability.
+شفافیت ارجاعی یک ویژگی بسیار مطلوب است: به این معنی است که توابع به طور مداوم نتایج یکسانی را با توجه به ورودی یکسان، صرف نظر از مکان و زمان فراخوانی، به دست می‌آورند. یعنی ارزیابی عملکرد کمتر - در حالت ایده آل، اصلاً - به عوارض جانبی حالت تغییرپذیر بستگی دارد.
 
-And we certainly don't get much help from industry in this regard. Introductions to object orientation tacitly promote such design, because they often show examples composed of graphs of relatively long-lived objects that happily call mutator methods on each other, which can be dangerous. However, with astute test-driven design, particularly when being sure to ["Mock Roles, not Objects"](http://www.jmock.org/oopsla2004.pdf), unnecessary mutability can be designed away.
+یکی از دلایل اصلی نقص در کد دستوری به متغیرهای قابل تغییر نسبت داده می شود. همه کسانی که این را می خوانند بررسی کرده اند که چرا مقداری ارزش در یک موقعیت خاص آنطور که انتظار می رود نیست. معناشناسی رویت می‌تواند به کاهش این عیوب موذی، یا حداقل به شدت محدود کردن مکان آنها کمک کند، اما مقصر واقعی آنها ممکن است در واقع مشیت طرح‌هایی باشد که از تغییرپذیری بیش از حد استفاده می‌کنند.
 
-The net result is a design that typically has better responsibility allocation with more numerous, smaller functions that act on arguments passed into them, rather than referencing mutable member variables. There will be fewer defects, and furthermore they will often be simpler to debug, because it is easier to locate where a rogue value is introduced in these designs than to otherwise deduce the particular context that results in an erroneous assignment. This adds up to a much higher degree of referential transparency, and positively nothing will get these ideas as deeply into your bones as learning a functional programming language, where this model of computation is the norm.
+و قطعا در این زمینه از صنعت کمک چندانی نمی کنیم. مقدمه‌هایی برای شی گرایی به طور ضمنی چنین طراحی را ترویج می‌کنند، زیرا اغلب نمونه‌هایی متشکل از نمودارهایی از اشیاء نسبتاً طولانی مدت را نشان می‌دهند که با خوشحالی روش‌های جهش‌دهنده را روی یکدیگر می‌خوانند، که می‌تواند خطرناک باشد. با این حال، با طراحی هوشمندانه مبتنی بر آزمایش، به ویژه زمانی که مطمئن باشید "نقش های ساختگی، نه اشیاء" را دارید ، تغییرپذیری غیر ضروری را می توان دور طراحی کرد.
 
-Of course, this approach is not optimal in all situations. For example, in object-oriented systems this style often yields better results with domain model development (i.e., where collaborations serve to break down the complexity of business rules) than with user-interface development.
+نتیجه خالص طرحی است که معمولاً دارای تخصیص مسئولیت بهتر با توابع متعدد و کوچکتر است که به جای ارجاع به متغیرهای عضو قابل تغییر، بر روی آرگومان های ارسال شده به آنها عمل می کند. نقص‌های کمتری وجود خواهد داشت، و علاوه بر این، اشکال‌زدایی آن‌ها اغلب ساده‌تر خواهد بود، زیرا مکان‌یابی مکان‌هایی که یک مقدار نادرست در این طرح‌ها معرفی شده است آسان‌تر از استنباط زمینه خاصی است که منجر به تخصیص اشتباه می‌شود. این به میزان بسیار بالاتری از شفافیت ارجاعی می‌افزاید، و به طور مثبت هیچ چیز به اندازه یادگیری یک زبان برنامه‌نویسی کاربردی، که در آن این مدل از محاسبات معمول است، این ایده‌ها را به عمق استخوان‌های شما وارد نمی‌کند.
 
-Master the functional programming paradigm so you are able to judiciously apply the lessons learned to other domains. Your object systems (for one) will resonate with referential transparency goodness and be much closer to their functional counterparts than many would have you believe. In fact, some would even assert that the apex of functional programming and object orientation are *merely a reflection of each other*, a form of computational yin and yang.
+البته این رویکرد در همه شرایط بهینه نیست. به عنوان مثال، در سیستم های شی گرا، این سبک اغلب نتایج بهتری را با توسعه مدل دامنه (یعنی جایی که همکاری ها برای از بین بردن پیچیدگی قوانین کسب و کار خدمت می کنند) نسبت به توسعه رابط کاربر به همراه دارد.
 
-By [Edward Garson](http://programmer.97things.oreilly.com/wiki/index.php/Edward_Garson)
+بر پارادایم برنامه نویسی کاربردی تسلط داشته باشید تا بتوانید درس های آموخته شده را به طور عاقلانه در حوزه های دیگر به کار ببرید. سیستم های شی شما (برای نمونه) با شفافیت ارجاعی طنین انداز می شوند و به همتایان عملکردی خود بسیار نزدیک تر از آن چیزی هستند که بسیاری فکر می کنید. در واقع، برخی حتی ادعا می کنند که راس برنامه نویسی تابعی و شی گرایی صرفاً بازتابی از یکدیگر هستند ، نوعی از یین و یانگ محاسباتی.
+
+[Seb Rose](http://programmer.97things.oreilly.com/wiki/index.php/Seb_Rose) معلومات کتاب
+
+</div>
